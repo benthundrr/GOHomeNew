@@ -349,8 +349,9 @@ h3{font-size:clamp(17px,1.9vw,21px);font-weight:800;letter-spacing:-.025em}
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);white-space:nowrap}
 .pchip.g{background:var(--gold);color:var(--on-gold);box-shadow:none}
 .post .btm{position:absolute;left:8px;right:8px;bottom:8px;color:#fff}
-.post .who{font-size:9px;font-weight:800}
-.post .cap{font-size:8px;color:rgba(255,255,255,.84);margin-top:2px;line-height:1.35}
+.post .who{font-size:8.5px;font-weight:800;letter-spacing:.01em}
+.post .cap{font-size:7.5px;color:rgba(255,255,255,.82);margin-top:2px;line-height:1.3;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pin{display:flex;align-items:center;gap:6px;margin-top:7px;padding:6px 7px;border-radius:11px;
   background:rgba(6,8,10,.64);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
@@ -653,14 +654,14 @@ h3{font-size:clamp(17px,1.9vw,21px);font-weight:800;letter-spacing:-.025em}
 .cap-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:clamp(28px,3.2vw,44px)}
 @media (min-width:661px){.cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1041px){.cap-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
-.cap{padding:clamp(22px,2.4vw,28px);border-radius:var(--rl);background:var(--card);
+.cap-card{padding:clamp(22px,2.4vw,28px);border-radius:var(--rl);background:var(--card);
   border:1px solid var(--line);display:flex;flex-direction:column;
   transition:transform .6s var(--e),box-shadow .6s var(--e),border-color .4s}
-.cap:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:var(--gold-bd)}
-.cap .ic{margin-bottom:18px}
-.cap:hover .ic{transform:scale(1.08) rotate(-6deg)}
-.cap h3{font-size:17px;margin-bottom:9px}
-.cap p{color:var(--mu);font-size:13.5px;line-height:1.66}
+.cap-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:var(--gold-bd)}
+.cap-card .ic{margin-bottom:18px}
+.cap-card:hover .ic{transform:scale(1.08) rotate(-6deg)}
+.cap-card h3{font-size:17px;margin-bottom:9px}
+.cap-card p{color:var(--mu);font-size:13.5px;line-height:1.66}
 
 /* ---------- AI orb ---------- */
 .orbwrap{position:relative;display:grid;place-items:center;padding:clamp(10px,2vw,26px)}
@@ -1495,37 +1496,37 @@ footer{padding-block:clamp(44px,5vw,66px) calc(40px + var(--bot));border-top:1px
           about your account. No creator can see anyone else's numbers.</p>
       </div>
       <div class="cap-grid">
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V4M16 19v-7M22 19H2"/></svg></span>
           <h3>Your own performance</h3>
           <p>Views, posts, valid posts, hotel vs attraction split, orders, settled GMV, average order
             value, your pin click-through and conversion rate &mdash; this period and last.</p>
         </div>
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
           <h3>Rolling 7 / 14 / 30 days</h3>
           <p>Windows built from per-post data and weighted by views, so "how am I doing lately"
             doesn't depend on where the month boundary falls.</p>
         </div>
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M15 10l6-3.5v11L15 14"/><rect x="3" y="6" width="12" height="12" rx="2.4"/></svg></span>
           <h3>Individual videos</h3>
           <p>Your best and worst posts with duration, views, click-through, completion rate and the
             GMV each one drove &mdash; so patterns are visible, not guessed at.</p>
         </div>
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
           <h3>Where you've performed</h3>
           <p>Every property you've posted, how each did, and when you last posted it &mdash; plus
             what's converting across the wider network.</p>
         </div>
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s5-2.6 5-8V6l-5-2-5 2v6c0 5.4 5 8 5 8z"/></svg></span>
           <h3>TikTok's monthly targets</h3>
           <p>The properties TikTok is pushing, tiered by how well they convert and how saturated they
             already are, filtered to your state and your county first.</p>
         </div>
-        <div class="cap rv">
+        <div class="cap-card rv">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-5v5"/></svg></span>
           <h3>Anonymous benchmarks</h3>
           <p>The median and top-10% across every Thundrr creator this period, so "is my CTR good" has
@@ -1648,13 +1649,13 @@ footer{padding-block:clamp(44px,5vw,66px) calc(40px + var(--bot));border-top:1px
           you're at and we'll get the invite moving. No cost, no obligation, and we never ask for a
           password or a payment.</p>
         <form class="form" id="jf" novalidate>
-          <div class="fld" data-f data-name="name">
+          <div class="fld" data-f data-name="TikTok username">
             <label for="f-tt">TikTok username <span class="req">*</span></label>
             <input id="f-tt" type="text" autocomplete="off" placeholder="@yourhandle">
             <span class="err">We need your handle to send the invite.</span>
           </div>
 
-          <div class="fld" data-f data-name="TikTok GO status" data-pick>
+          <div class="fld" data-f data-name="Has TikTok GO or needs whitelisting" data-pick>
             <span class="q">Do you already have TikTok GO? <span class="req">*</span></span>
             <div class="opts" role="radiogroup" aria-label="TikTok GO status">
               <button type="button" class="opt" data-val="Already has TikTok GO">
@@ -1676,19 +1677,19 @@ footer{padding-block:clamp(44px,5vw,66px) calc(40px + var(--bot));border-top:1px
             <span class="err">Pick the option that fits.</span>
           </div>
 
-          <div class="fld" data-f data-name="email">
+          <div class="fld" data-f data-name="Email address">
             <label for="f-em">Email address <span class="req">*</span></label>
             <input id="f-em" type="email" autocomplete="email" placeholder="you@email.com">
             <span class="err">A valid email, so we can reach you.</span>
           </div>
 
-          <div class="fld" data-f data-name="phone">
+          <div class="fld" data-f data-name="Phone number">
             <label for="f-ph">Phone number <span class="req">*</span></label>
             <input id="f-ph" type="tel" autocomplete="tel" placeholder="(555) 000-0000">
             <span class="err">A number we can reach you on.</span>
           </div>
 
-          <div class="fld" data-f data-name="Can film locally" data-pick>
+          <div class="fld" data-f data-name="Can film local hotels on own time" data-pick>
             <span class="q">Can you film hotels local to you, on your own time?
               <span class="req">*</span></span>
             <div class="opts" role="radiogroup" aria-label="Ability to film locally">
@@ -2412,30 +2413,27 @@ footer{padding-block:clamp(44px,5vw,66px) calc(40px + var(--bot));border-top:1px
     e.preventDefault();
     if (sending || !validate()) return;
 
-    /* Field names follow Formspree's special-field list (docs updated Jan 2026):
-       `email` drives the Reply-To header, `subject` sets the email subject,
-       `name` and `phone` map to the CRM plugins, and `message` becomes the body
-       of the notification. `_gotcha` is their documented honeypot. */
+    /* These keys must match the Google Sheet's existing column headers exactly.
+       The sheet maps by field name, so any key not already a column gets
+       appended as a new one — do not rename or add fields here without adding
+       the matching column first. `_date` is written by the Sheets plugin. */
     var get = function (n) {
       var f = $$('[data-f]', form).filter(function (x) { return x.dataset.name === n; })[0];
       return f ? valueOf(f) : '';
     };
-    var handle = get('name');
+    var handle = get('TikTok username');
     var payload = {
-      subject: 'Thundrr GO application — ' + handle,
-      name: handle,
-      email: get('email'),
-      phone: get('phone'),
-      'TikTok GO status': get('TikTok GO status'),
-      'Can film locally': get('Can film locally'),
-      message:
-        'TikTok: ' + handle +
-        '\nGO status: ' + get('TikTok GO status') +
-        '\nCan film locally: ' + get('Can film locally') +
-        '\nEmail: ' + get('email') +
-        '\nPhone: ' + get('phone'),
-      _gotcha: $('#f-hp') ? $('#f-hp').value : ''
+      _subject: 'Thundrr GO application — ' + handle,
+      'TikTok username': handle,
+      'Has TikTok GO or needs whitelisting': get('Has TikTok GO or needs whitelisting'),
+      'Email address': get('Email address'),
+      'Phone number': get('Phone number'),
+      'Can film local hotels on own time': get('Can film local hotels on own time')
     };
+    /* Only send the honeypot when a bot has actually filled it. Sending it empty
+       on every submission would add a stray _gotcha column to the sheet. */
+    var hp = $('#f-hp') ? $('#f-hp').value.trim() : '';
+    if (hp) payload._gotcha = hp;
 
     sending = true;
     sub.disabled = true;
